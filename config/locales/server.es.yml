@@ -351,7 +351,10 @@ es:
           Escribe `#` en el medio de una oración y selecciona cualquier categoría o etiqueta.
         not_found: |-
           Hmm, no veo una categoría en ninguna parte. Nota que `#` no puede ser el primer carácter de la oración. ¿Puedes copiar esto en tu próxima respuesta?
-              Yo puedo crear un enlace a la categoría con #
+
+          ```text
+          Yo puedo crear un enlace a la categoría con #
+          ```
         reply: |-
           ¡Excelente! Recuerda que ésto funciona para ambos, categorías _y_ etiquetas, si las etiquetas están disponibles.
 
@@ -373,10 +376,12 @@ es:
           Whoops! No hubo ninguna encuesta en tu respuesta.
           Usa el ícono de engranaje: <img src="/images/font-awesome-gear.png" width="16" height="16"> en el editor, o bien copia y pega esta encuesta en tu próxima respuesta:
 
-              [poll]
-              * :cat:
-              * :dog:
-              [/poll]
+          ```text
+          [poll]
+          * :cat:
+          * :dog:
+          [/poll]
+          ```
         reply: |-
           Hey, ¡hermosa encuesta! ¿Cómo te enseñé?
               [poll]
@@ -402,9 +407,11 @@ es:
         not_found: |-
           ¿Tiene problemas para crear un widget de detalles? Trate de incluir lo siguiente en su siguiente respuesta:
 
-              [details=Seleccionar para ver detalles]
-              Aquí están los detalles
-              [/details]
+          ```text
+          [details=Seleccionar para ver detalles]
+          Aquí están los detalles
+          [/details]
+          ```
         reply: |-
           ¡Gran trabajo — tu atención a los _detalles_ es admirable!
 
