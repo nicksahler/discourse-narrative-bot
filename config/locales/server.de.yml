@@ -4,6 +4,7 @@ de:
     disable_discourse_narrative_bot_welcome_post: "Die vom Discourse Narrative Bot gesendete Willkommensnachricht deaktivieren"
     discourse_narrative_bot_ignored_usernames: "Benutzernamen, die vom Discourse Narrative Bot ignoriert werden sollen"
     discourse_narrative_bot_disable_public_replies: "Öffentliche Antworten von Discourse Narrative Bot deaktivieren"
+    discourse_narrative_bot_welcome_post_type: "Die Art der Willkommensnachricht, die vom Discourse Narrative Bot versendet werden soll."
   badges:
     certified:
       name: Zertifiziert
@@ -261,7 +262,7 @@ de:
           Oh nein, mein böser Beitrag wurde nicht gemeldet. :worried: Kannst du ihn als unangemessen **melden** <img src="/images/font-awesome-flag.png" width="16" height="16">? Vergiss nicht, die „Mehr anzeigen“-Schaltfläche <img src="/images/font-awesome-ellipsis.png" width="16" height="16"> zu verwenden, damit für jeden Beitrag weitere Aktionen sichtbar werden.
       search:
         instructions: |-
-          _Psst_… ich habe in einem meiner vorherigen Antworten eine Überraschung versteckt. Wenn du für eine Herausforderung zu haben bist, **wähle das Such-Symbol aus** <img src="/images/font-awesome-search.png" width="16" height="16"> oben rechts &#8599; und suche danach.
+          _Psst_… ich habe in diesem Thema eine Überraschung versteckt. Wenn du für eine Herausforderung zu haben bist, dann **wähle das Such-Symbol** <img src="/images/font-awesome-search.png" width="16" height="16"> oben rechts &#8599; aus und suche danach.
 
           Versuche in diesem Thema nach dem Begriff „Capy&#8203;bara“ zu suchen.
         hidden_message: |-
@@ -344,7 +345,9 @@ de:
         not_found: |-
           Hmm, ich sehe darin nirgendwo eine Kategorie. Beachte, dass `#` nicht das erste Zeichen sein darf. Kannst du dies in deine nächste Antwort kopieren?
 
-              Ich erstelle einen Kategorie-Link per #
+          ```text
+          Ich erstelle einen Kategorie-Link per #
+          ```
         reply: |-
           Hervorragend! Denk daran, dass dies sowohl für Kategorien _als auch_ für Schlagwörter funktioniert, sofern Schlagwörter aktiviert sind.
       change_topic_notification_level:
@@ -368,10 +371,12 @@ de:
 
           Verwende das <img src="/images/font-awesome-gear.png" width="16" height="16"> Zahnrad im Editor, oder kopiere diese Umfrage und füge sie in deine nächste Antwort ein:
 
-              [poll]
-              * :cat:
-              * :dog:
-              [/poll]
+          ```text
+          [poll]
+          * :cat:
+          * :dog:
+          [/poll]
+          ```
         reply: |-
           Hey, schöne Umfrage! Wie mache ich mich als Lehrer?
 
@@ -397,9 +402,11 @@ de:
         not_found: |-
           Hast du Schwierigkeiten, den Details-Abschnitt zu erstellen? Versuche Folgendes in deine nächste Antwort aufzunehmen:
 
-              [details=Wähle mich aus, um die Details zu sehen]
-              Hier sind die Details
-              [/details]
+          ```text
+          [details=Wähle mich aus, um die Details zu sehen]
+          Hier sind die Details
+          [/details]
+          ```
         reply: |-
           Großartige Arbeit — deine Aufmerksamkeit fürs _Detail_ ist bewundernswert!
       end:
@@ -413,4 +420,3 @@ de:
           Bis bald! Wenn du wieder mit mir sprechen möchtest, schicke mir jederzeit eine Nachricht :sunglasses:
       certificate:
         alt: 'Urkunde für fortgeschrittene Benutzer'
-
