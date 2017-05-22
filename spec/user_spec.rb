@@ -53,6 +53,33 @@ describe User do
             ))
           end
         end
+
+        describe 'when welcome message is delayed' do
+          before do
+            SiteSetting.discourse_narrative_bot_welcome_post_delay = 100
+            SiteSetting.queue_jobs = true
+          end
+
+          it 'should delay the initialization of the new user track' do
+            Timecop.freeze do
+              user
+
+              expect(Jobs::NarrativeInit.jobs.first['at'])
+               .to be_within(1.second).of(Time.zone.now.to_f + 100)
+            end
+          end
+
+          it 'should delay sending the welcome message' do
+            SiteSetting.discourse_narrative_bot_welcome_post_type = 'welcome_message'
+
+            Timecop.freeze do
+              user
+
+              expect(Jobs::NarrativeInit.jobs.first['at'])
+                .to be_within(1.second).of(Time.zone.now.to_f + 100)
+            end
+          end
+        end
       end
     end
 

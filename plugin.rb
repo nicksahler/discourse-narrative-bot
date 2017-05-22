@@ -116,16 +116,18 @@ after_initialize do
   self.add_model_callback(User, :after_commit, on: :create) do
     return if SiteSetting.disable_discourse_narrative_bot_welcome_post
 
+    delay = SiteSetting.discourse_narrative_bot_welcome_post_delay
+
     case SiteSetting.discourse_narrative_bot_welcome_post_type
     when 'new_user_track'
       if enqueue_narrative_bot_job?
-        Jobs.enqueue(:narrative_init,
+        Jobs.enqueue_in(delay, :narrative_init,
           user_id: self.id,
           klass: DiscourseNarrativeBot::NewUserNarrative.to_s
         )
       end
     when 'welcome_message'
-      Jobs.enqueue(:send_default_welcome_message, user_id: self.id)
+      Jobs.enqueue_in(delay, :send_default_welcome_message, user_id: self.id)
     end
   end
 
