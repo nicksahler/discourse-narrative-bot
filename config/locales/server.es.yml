@@ -375,6 +375,7 @@ es:
           ¿Sabes que puedes agregar una encuesta en cualquier mensaje? Intenta usando el botón de engranaje <img src="/images/font-awesome-gear.png" width="16" height="16"> en el editor para **armar una encuesta**.
         not_found: |-
           Whoops! No hubo ninguna encuesta en tu respuesta.
+
           Usa el ícono de engranaje: <img src="/images/font-awesome-gear.png" width="16" height="16"> en el editor, o bien copia y pega esta encuesta en tu próxima respuesta:
 
           ```text
